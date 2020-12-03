@@ -53,7 +53,20 @@
             </group>
         </section>
 
-        <section id="klaviyo_reclaim_user" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="klaviyo_reclaim_oauth" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Setup Oauth</label>
+            <tab>klaviyo</tab>
+            <resource>Klaviyo_Reclaim::klaviyo_reclaim</resource>
+            <group id="klaviyo_oauth" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Setup Oauth</label>
+                <field id="name" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" required="true">
+                    <label>Name</label>
+                    <validate>required-entry validate-no-empty</validate>
+                </field>
+            </group>
+        </section>
+
+        <section id="klaviyo_reclaim_user" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Setup Klaviyo User</label>
             <tab>klaviyo</tab>
             <resource>Klaviyo_Reclaim::klaviyo_reclaim</resource>
@@ -69,6 +82,7 @@
                 <field id="email" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Email</label>
                 </field>
+                <comment>NOTE: Support for Klaviyo user authentication is set to deprecate.  We advise setting up access via the Setup Oauth tab</comment>
             </group>
         </section>
     </system>

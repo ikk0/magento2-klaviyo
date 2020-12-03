@@ -20,6 +20,8 @@ class ScopeSetting extends \Magento\Framework\App\Helper\AbstractHelper
     const KLAVIYO_PASSWORD = 'klaviyo_reclaim_user/klaviyo_user/password';
     const KLAVIYO_EMAIL = 'klaviyo_reclaim_user/klaviyo_user/email';
 
+    const KLAVIYO_OAUTH_NAME = 'klaviyo_reclaim_oauth/klaviyo_oauth/name';
+
     protected $_scopeConfig;
     protected $_request;
     protected $_state;
@@ -174,6 +176,16 @@ class ScopeSetting extends \Magento\Framework\App\Helper\AbstractHelper
     public function unsetKlaviyoEmail()
     {
         return $this->setScopeSetting(self::KLAVIYO_EMAIL, '');
+    }
+
+    public function getKlaviyoOauthName()
+    {
+        return $this->getScopeSetting(self::KLAVIYO_OAUTH_NAME);
+    }
+
+    public function unsetKlaviyoOauthName()
+    {
+        return $this->setScopeSetting(self::KLAVIYO_OAUTH_NAME, '');
     }
 
     public function getCustomMediaURL()

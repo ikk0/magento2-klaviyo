@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 - Added a.fast.klaviyo.com to img-src csp whitelist
+- Oauth observer to create Magento2 Integration Oauth configuration
 
 #### Changed
 - Removed csp mode from config.xml
